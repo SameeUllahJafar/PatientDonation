@@ -1,0 +1,109 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+<head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #4e244e; /* Purple */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+            input[type=submit]:hover {
+                background-color: #301c30; /* Darker Purple on Hover */
+            }
+
+        /* Style the container/contact section */
+        .container {
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #E5E4E2;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Create two columns that float next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 20px;
+        }
+
+        /* Style the map */
+        .map-container {
+            overflow: hidden;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+            .map-container iframe {
+                width: 100%;
+                height: 300px;
+                border: 0;
+            }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        h2 {
+            color: #4e244e; /* Purple */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div style="text-align: center">
+            <h2>Contact Us</h2>
+            <p>Swing by for a cup of coffee, or leave us a message:</p>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.2278148630244!2d74.30246967503311!3d31.572800044550817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39191ca430710789%3A0x5335bea47a99346f!2sNew%20Hostel%20GC%20University!5e0!3m2!1sen!2s!4v1701035813074!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="column">
+                <form method="post">
+                    <label for="Name">First Name</label>
+                    <input type="text" name="Name" placeholder="First Name">
+
+                    <label for="last_Name">Last Name</label>
+                    <input type="text" name="last_Name" placeholder="Your last name..">
+
+                    <label for="Country">Country</label>
+                    <select id="country" name="Country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

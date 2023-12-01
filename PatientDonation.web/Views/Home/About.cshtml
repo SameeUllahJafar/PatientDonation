@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+
+<head>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9; /* Light Gray */
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+            background-color: #fff; /* White */
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #fff; /* White */
+            color: #333; /* Dark Gray */
+        }
+
+        .container {
+            padding: 0 16px;
+        }
+
+            .container::after, .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+        .title {
+            color: #4e244e; /* Purple */
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #4e244e; /* Purple */
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+            .button:hover {
+                background-color: #301c30; /* Darker Purple on Hover */
+            }
+
+    </style>
+</head>
+<div class="about-section">
+    <h1 class="title">About Us</h1>
+    <p>
+        Welcome to DONO, where compassion meets action, and every contribution creates a ripple of positive change.
+        At DONO, we believe in the power of collective goodwill to transform lives and build a brighter future for those in need.
+    </p>
+    <h1 class="title">What Drives Us</h1>
+    <p>
+        At the heart of DONO is a commitment to empathy and social responsibility.
+        We understand that small acts of kindness can create profound transformations. Whether it's supporting medical treatments, providing education opportunities,
+        or ensuring access to basic necessities, we are dedicated to making a positive difference.
+    </p>
+    <h1 class="title">Join Us in Making a Difference</h1>
+    <p>
+        You are not just a donor; you are a crucial part of a community that believes in the power of compassion.
+        Join us on this journey towards a more equitable and compassionate world. Together, we can create lasting change and inspire hope.
+
+        Thank you for being a part of DONO.
+    </p>
+  
+</div>

@@ -1,0 +1,99 @@
+﻿@model List<Needy>
+
+@{
+    ViewData["Title"] = "Donation";
+}
+
+<head>
+    <style>
+        body {
+            font-family: 'Sriracha', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 30px;
+            margin: 20px;
+            width: calc(33.33% - 40px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+
+            .card:hover {
+                transform: scale(1.05);
+            }
+
+            .card img {
+                width: 100%;
+                max-height: 200px;
+                border-radius: 10px;
+                object-fit: cover;
+                margin-bottom: 15px;
+            }
+
+            .card h2 {
+                color: #4e244e;
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .card h5 {
+                color: #767676;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            .card p {
+                color: #555;
+                font-size: 16px;
+                margin: 5px 0;
+            }
+
+        .card-btn {
+            background: #a882a8;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+            .card-btn:hover {
+                background: #4e244e;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        @foreach (var Needy in Model)
+        {
+            <div class="card">
+                <img src="/Images/pic2.jpg" alt="Patient Image" />
+
+                <h2>@Needy.Disease Patient</h2>
+                <h5>Title description, Dec 7, 2017</h5>
+
+                <p><strong>Patient Name:</strong> @Needy.Name</p>
+                <p><strong>Patient CNIC:</strong> @Needy.CNIC</p>
+                <p><strong>Donation Required:</strong> @Needy.Donation_Demanded</p>
+                <p><strong>Donation Collected:</strong> @Needy.Donation_Received</p>
+
+                <a href="@Url.Action("Donar", "Donations")">
+                    <button class="card-btn">Donate Now</button>
+                </a>
+            </div>
+        }
+    </div>
+</body>

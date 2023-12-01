@@ -1,0 +1,164 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap">
+    <style>
+        /* CSS for main section */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Sriracha', cursive;
+        }
+
+        .intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 520px;
+            background: linear-gradient(to bottom, rgba(10, 47, 84, 0.7) 0%, rgba(10, 47, 84, 0.7) 100%), url("/Images/pic1.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+            .intro h1 {
+                font-family: 'Sriracha', cursive;
+                font-size: 60px;
+                color: #ffc107; /* Gold */
+                font-weight: bold;
+                text-transform: uppercase;
+                margin: 0;
+            }
+
+            .intro p {
+                font-size: 20px;
+                color: #fff;
+                text-transform: uppercase;
+                margin: 20px 0;
+            }
+
+            .intro button {
+                background-color: #007bff; /* Deep Blue */
+                color: #fff;
+                padding: 10px 25px;
+                border: none;
+                border-radius: 5px;
+                font-size: 20px;
+                font-weight: bold;
+                cursor: pointer;
+                box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+            }
+
+        .achievements {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px 80px;
+            background-color: #f2f2f2;
+        }
+
+            .achievements .work {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0 40px;
+            }
+
+                .achievements .work i {
+                    width: fit-content;
+                    font-size: 50px;
+                    color: #007bff; /* Deep Blue */
+                    border-radius: 50%;
+                    border: 2px solid #007bff; /* Deep Blue */
+                    padding: 12px;
+                }
+
+                .achievements .work .work-heading {
+                    font-size: 20px;
+                    color: #007bff; /* Deep Blue */
+                    text-transform: uppercase;
+                    margin: 10px 0;
+                }
+
+                .achievements .work .work-text {
+                    font-size: 15px;
+                    color: #555;
+                    margin: 10px 0;
+                }
+
+        .about-me {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 80px;
+            border-top: 2px solid #eeeeee;
+            background-color: #fff;
+        }
+
+            .about-me img {
+                width: 500px;
+                max-width: 100%;
+                height: 600px;
+                border-radius: 10px;
+                margin: 10px;
+            }
+
+        .about-me-text h2 {
+            font-size: 30px;
+            color: #007bff; /* Deep Blue */
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .about-me-text p {
+            font-size: 15px;
+            color: #555;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+
+<div class="intro" style="background-color:#a882a8" ;>
+    <h1>DONO</h1>
+    <p>To Help those who need us</p>
+
+    <a href="@Url.Action("Donation", "Donations")">
+        <button>Donation</button>
+    </a>
+</div>
+<div class="achievements">
+    <div class="work">
+        <i class="fas fa-atom"></i>
+        <p class="work-heading">Educate</p>
+        <p class="work-text">I have worked on many projects and I am very proud of them. I am a very good developer and I am always looking for new projects.</p>
+    </div>
+    <div class="work">
+        <i class="fas fa-skiing"></i>
+        <p class="work-heading">Treat</p>
+        <p class="work-text">I have a lot of skills and I am very good at them. I am very good at programming and I am always looking for new skills.</p>
+    </div>
+    <div class="work">
+        <i class="fas fa-ethernet"></i>
+        <p class="work-heading">Help</p>
+        <p class="work-text">I have a lot of network skills and I am very good at them. I am very good at networking and I am always looking for new network skills.</p>
+    </div>
+</div>
+<div class="about-me">
+    <div class="about-me-text">
+        <h2>Main Mission</h2>
+        <p>
+            The mission of our donation website is to serve as a transformative platform that facilitates the act of giving and connects individuals with impactful causes.
+            Our primary goal is to empower donors to make a positive difference in the world by providing a seamless and secure avenue for financial contributions.
+            We strive to foster a sense of community and engagement, allowing donors to connect with a diverse range of charitable organizations, nonprofits, and individual campaigns.
+            Transparency and accountability are at the core of our mission, as we believe in providing clear information about how donated funds are utilized and regularly updating donors on the tangible impact of their contributions.
+            Our platform encompasses a wide spectrum of causes, ranging from health and education to environmental conservation and disaster relief, enabling donors to support initiatives that align with their values. We are committed to accessibility, ensuring that the donation process is user-friendly and inclusive.
+            Through education and awareness initiatives, we aim to raise consciousness about various social issues and promote informed decision-making among donors.
+        </p>
+    </div>
+    <img src="/Images/pic2.jpg" alt="me">
+</div>
